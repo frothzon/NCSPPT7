@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+ncsPPT
+</title>
+</head>
+<body>
+
+
+<style>
+div
+{
+background: 
+  /* On "top" */
+  repeating-linear-gradient(
+    46.5deg,
+    transparent,
+    transparent 8px,
+    #fff 10px,
+    #a66 20px
+  ),
+  /* on "bottom" */
+  linear-gradient(
+    to bottom,
+    #caa,
+    #fff,
+	#caa
+  );
+  
+  
+color: red;
+-webkit-text-stroke: 0 black;
+text-shadow:
+       1px 1px 1px #000;
+}
+td
+{
+color: white;
+-webkit-text-stroke: .5px black;
+text-shadow:
+       2px 2px 0 #000;
+}
+body
+{
+background: 
+  /* On "top" */
+  repeating-linear-gradient(
+    46.5deg,
+    transparent,
+    transparent 12px,
+    #88f 10px,
+    #ccc 20px
+  ),
+  /* on "bottom" */
+  linear-gradient(
+    to bottom,
+    #55f,
+    #fff,
+	#55f
+  );
+ font-family: Tahoma, Geneva, sans-serif;
+}
+table{
+background: 
+  /* On "top" */
+  repeating-linear-gradient(
+    46.5deg,
+    transparent,
+    transparent 14px,
+    #88f 10px,
+    #77f 20px
+  ),
+  /* on "bottom" */
+  linear-gradient(
+    to bottom,
+    #77f,
+    #44f,
+	#77f
+  );
+ border-style:outset;
+ 
+}
+</style>
+
+<center>
+<br>
+<br>
+<table border="5" bordercolor="blue" bgcolor=#4d94ff><td>
+<h1>
+<center>
+Password Generator
+</center>
+</h1>
+<br>
+<br>
+
+<table border="3" bordercolor="black" bgcolor=#0066ff>
+
+<th>Password</th>
+<th>Code Seed</th>
+</tr>
+<tr>
+<td><input type="text" id="myText" value="-MyPass-"></td>
+<td><input type="text" id="myCode" value="sp3078"></td>
+
+</table>
+<br>
+<center>
+<table border="1" bordercolor="red" bgcolor=#fff2e6>
+
+<td><div>
+Use special characters
+</td></div>
+<th>
+ <input type="checkbox" id="myCheck">
+ </th>
+ 
+</tr>
+<tr>
+
+</center></table><br><br>
+
+<input type="text" id="myOut" value="-copy output text here -">
+
+
+<h3>Click to Encode</h3>
+
+<button onclick="runApp()">Encrypt</button>
+
+<br>
+<br>
+</td></table>
+</center>
+
+
+
+<script>
+var _0x514c=['charAt','911008ZbVHSf','982063QkdxrT','body','pow','innerHTML','11UEuSyZ','abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-','30451iBKbJn','myOut','0123456789!@#$&_-','value','376496UFXlTI','1MdPFNa','740308DoItuk','length','742921BCboBr','01234567890123456','581683gnabIl','getElementById','checked'];var _0x548324=_0x2e1a;(function(_0x438c27,_0x320c28){var _0x108c5e=_0x2e1a;while(!![]){try{var _0x476a18=parseInt(_0x108c5e(0x15b))*parseInt(_0x108c5e(0x15a))+-parseInt(_0x108c5e(0x159))+parseInt(_0x108c5e(0x164))+-parseInt(_0x108c5e(0x153))*-parseInt(_0x108c5e(0x155))+-parseInt(_0x108c5e(0x163))+-parseInt(_0x108c5e(0x15d))+parseInt(_0x108c5e(0x15f));if(_0x476a18===_0x320c28)break;else _0x438c27['push'](_0x438c27['shift']());}catch(_0x5e64fb){_0x438c27['push'](_0x438c27['shift']());}}}(_0x514c,0x9494e));var input_text='',output_text='',input_seed='',offset=0x0,curr_value=new Array(),input_nums=new Array(),seed_nums=new Array();const input_check=_0x548324(0x154),out_letters='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';function _0x2e1a(_0x3a931a,_0x29b8ef){return _0x2e1a=function(_0x514c21,_0x2e1a17){_0x514c21=_0x514c21-0x150;var _0x39b7c7=_0x514c[_0x514c21];return _0x39b7c7;},_0x2e1a(_0x3a931a,_0x29b8ef);}var out_chars='0123456789!@#$&_-';function clearArrays(){for(u=0x0;u<input_text['length'];u++){curr_value[u]=0x0,input_nums[u]=0x0,seed_nums[u]=0x0,offset=0x0;}}function clearScn(){var _0xddb7c6=_0x548324;document[_0xddb7c6(0x150)][_0xddb7c6(0x152)]='';}function populateArrays(){var _0x2a9079=_0x548324;for(i=0x0;i<input_check[_0x2a9079(0x15c)];i++){for(u=0x0;u<input_text[_0x2a9079(0x15c)];u++){input_text[_0x2a9079(0x162)](u)==input_check[_0x2a9079(0x162)](i)&&(input_nums[u]=i,curr_value[u]+=i,offset+=i);var _0x36775e=u%seed_nums['length'];input_seed[_0x2a9079(0x162)](_0x36775e)==input_check['charAt'](i)&&(seed_nums[_0x36775e]=i,curr_value[u]+=i,offset+=i);}}}function incryptPassword(){var _0x22b478=_0x548324,_0x40743a='';output_text='';for(i=0x0;i<input_text[_0x22b478(0x15c)];i++){var _0x1dc175=i%seed_nums[_0x22b478(0x15c)],_0x463434=(input_nums[i]+curr_value[i]+Math[_0x22b478(0x151)](0x2,seed_nums[_0x1dc175])+offset)%out_letters['length'];_0x40743a+=out_letters[_0x22b478(0x162)](_0x463434);}for(i=0x0;i<input_text['length'];i++){var _0x1dc175=i%seed_nums[_0x22b478(0x15c)],_0x463434=(input_nums[i]+curr_value[i]+Math[_0x22b478(0x151)](0x2,seed_nums[_0x1dc175])+offset)%out_chars[_0x22b478(0x15c)];_0x40743a+=out_chars[_0x22b478(0x162)](_0x463434);}var _0x2c564d=_0x40743a['length']/0x2;for(t=0x0;t<_0x2c564d;t++){output_text+=_0x40743a['charAt'](t)+_0x40743a[_0x22b478(0x162)](t+_0x2c564d);}}function runApp(){var _0x3a1bc2=_0x548324,_0x5d0f1a=document[_0x3a1bc2(0x160)]('myCheck');_0x5d0f1a[_0x3a1bc2(0x161)]==![]?out_chars=_0x3a1bc2(0x15e):out_chars=_0x3a1bc2(0x157),input_text=document[_0x3a1bc2(0x160)]('myText')['value'],input_seed=document[_0x3a1bc2(0x160)]('myCode')['value'],clearArrays(),populateArrays(),incryptPassword(),document['getElementById'](_0x3a1bc2(0x156))[_0x3a1bc2(0x158)]=output_text;}
+
+</script>
+
+
+</body>
+</html>
